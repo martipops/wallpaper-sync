@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Go to repo root
+cd "$(git rev-parse --show-toplevel)"
+
+# Find image files in the root directory
+IMAGES=$(find . -maxdepth 1 -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.gif' \) | sort)
+
+# Remove old section in README.md if it exists
+if [[ -f README.md ]]; then
+    sed -i '' '/<!-- IMAGES START -->/,/<!-- IMAGES END -->/d' README.md  # macOS version
+fi
+
+# Start new section
+{
+    echo ""
+    echo "<!-- IMAGES START -->"
+    for img in $IMAGES; do
+        filename=$(basename "$img")
+        echo "**${filename}**"
+        echo ""
+        echo "![](${filename})"
+        echo ""
+    done
+    echo "<!-- IMAGES END -->"
+} >> README.md
+
+# Stage the updated README
+git add README.md
