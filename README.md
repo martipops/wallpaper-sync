@@ -1,6 +1,14 @@
 
 
 <!-- IMAGES START -->
+**chess-floor.jpg**
+
+![](chess-floor.jpg)
+
+**ethereal-drive.png**
+
+![](ethereal-drive.png)
+
 **fake-space.jpg**
 
 ![](fake-space.jpg)
@@ -17,13 +25,13 @@
 
 ![](mystic-drive.png)
 
+**nebula-digital.png**
+
+![](nebula-digital.png)
+
 **piano-frog-uncropped.png**
 
 ![](piano-frog-uncropped.png)
-
-**piano-frog.png**
-
-![](piano-frog.png)
 
 **sorbet-coulds.jpg**
 
